@@ -11,8 +11,14 @@ import java.util.List;
 
 @Controller
 public class WebController {
-    @Autowired
     private PilotoServicio pilotoServicio;
+    @Autowired
+    public WebController(PilotoServicio pilotoServicio) {
+        this.pilotoServicio = pilotoServicio;
+    }
+
+
+
 
     @RequestMapping(value ="/")
     public String index(Model model) {
